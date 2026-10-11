@@ -1,0 +1,773 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Отделы головного мозга</title>
+<style>
+/* Layout: liquid-glass study app over a slowly drifting green aurora. One screen at a time: menu, quiz (diagram left, questions right), result. */
+:root{
+  --font-display:ui-rounded,"SF Pro Rounded",-apple-system,BlinkMacSystemFont,"SF Pro Display","Segoe UI Variable Display","Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  --font-body:-apple-system,BlinkMacSystemFont,"SF Pro Text","Segoe UI Variable Text","Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  --bg:#e6f4ec;
+  --blob-a:rgba(80,210,135,.8);
+  --blob-b:rgba(195,238,120,.75);
+  --blob-c:rgba(70,200,185,.65);
+  --fg:#0c2a1b;
+  --fg-dim:#3a5a49;
+  --fg-faint:#587a67;
+  --glass:rgba(255,255,255,.5);
+  --glass-solid:#f3fbf6;
+  --glass-2:rgba(255,255,255,.66);
+  --glass-3:rgba(255,255,255,.86);
+  --glass-edge:rgba(255,255,255,.8);
+  --glass-hi:rgba(255,255,255,.95);
+  --glass-lo:rgba(10,90,50,.1);
+  --glass-shadow:0 18px 40px -16px rgba(10,90,50,.35),0 2px 8px rgba(10,90,50,.08);
+  --spec:linear-gradient(135deg,rgba(255,255,255,.55),rgba(255,255,255,0) 40%);
+  --track:rgba(12,90,50,.12);
+  --accent:#16a366;
+  --accent-ink:#0b6b41;
+  --accent-soft:rgba(22,163,102,.15);
+  --btn-bg:linear-gradient(180deg,#0f8d55,#096a3e);
+  --btn-fg:#ffffff;
+  --btn-glow:rgba(8,100,55,.5);
+  --ok-bg:rgba(36,180,110,.17);
+  --ok-edge:rgba(15,130,75,.55);
+  --ok-ink:#0a6b3f;
+  --no-bg:rgba(226,84,72,.14);
+  --no-edge:rgba(179,38,30,.5);
+  --no-ink:#a3201a;
+  --no-btn:#b3261e;
+  --no-btn-fg:#ffffff;
+  --warn-ink:#8a5600;
+  --part-fill:rgba(255,255,255,.62);
+  --part-stroke:#2f8a5d;
+  --part-on:#3ad28c;
+  --part-on-stroke:#08603a;
+  --ring:#08603a;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#06130d;
+    --blob-a:rgba(20,140,80,.7);
+    --blob-b:rgba(80,150,30,.5);
+    --blob-c:rgba(10,130,125,.55);
+    --fg:#e5faee;
+    --fg-dim:#a9ccb8;
+    --fg-faint:#86ab95;
+    --glass:rgba(22,52,38,.5);
+    --glass-solid:#10281d;
+    --glass-2:rgba(32,72,52,.55);
+    --glass-3:rgba(44,96,70,.7);
+    --glass-edge:rgba(150,255,200,.2);
+    --glass-hi:rgba(200,255,225,.3);
+    --glass-lo:rgba(0,0,0,.4);
+    --glass-shadow:0 20px 44px -16px rgba(0,0,0,.7),0 2px 8px rgba(0,0,0,.4);
+    --spec:linear-gradient(135deg,rgba(190,255,220,.16),rgba(190,255,220,0) 40%);
+    --track:rgba(255,255,255,.12);
+    --accent:#4be08e;
+    --accent-ink:#7df0ae;
+    --accent-soft:rgba(75,224,142,.18);
+    --btn-bg:linear-gradient(180deg,#63ec9f,#33c677);
+    --btn-fg:#03210f;
+    --btn-glow:rgba(60,220,130,.4);
+    --ok-bg:rgba(60,220,140,.16);
+    --ok-edge:rgba(110,240,170,.5);
+    --ok-ink:#7df0ae;
+    --no-bg:rgba(255,110,100,.14);
+    --no-edge:rgba(255,143,134,.5);
+    --no-ink:#ff9c94;
+    --no-btn:#ff8f86;
+    --no-btn-fg:#2a0906;
+    --warn-ink:#ffc965;
+    --part-fill:rgba(190,255,220,.1);
+    --part-stroke:#63bd90;
+    --part-on:#3fe08c;
+    --part-on-stroke:#c4ffe0;
+    --ring:#c4ffe0;
+    color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#06130d;
+  --blob-a:rgba(20,140,80,.7);
+  --blob-b:rgba(80,150,30,.5);
+  --blob-c:rgba(10,130,125,.55);
+  --fg:#e5faee;
+  --fg-dim:#a9ccb8;
+  --fg-faint:#86ab95;
+  --glass:rgba(22,52,38,.5);
+  --glass-solid:#10281d;
+  --glass-2:rgba(32,72,52,.55);
+  --glass-3:rgba(44,96,70,.7);
+  --glass-edge:rgba(150,255,200,.2);
+  --glass-hi:rgba(200,255,225,.3);
+  --glass-lo:rgba(0,0,0,.4);
+  --glass-shadow:0 20px 44px -16px rgba(0,0,0,.7),0 2px 8px rgba(0,0,0,.4);
+  --spec:linear-gradient(135deg,rgba(190,255,220,.16),rgba(190,255,220,0) 40%);
+  --track:rgba(255,255,255,.12);
+  --accent:#4be08e;
+  --accent-ink:#7df0ae;
+  --accent-soft:rgba(75,224,142,.18);
+  --btn-bg:linear-gradient(180deg,#63ec9f,#33c677);
+  --btn-fg:#03210f;
+  --btn-glow:rgba(60,220,130,.4);
+  --ok-bg:rgba(60,220,140,.16);
+  --ok-edge:rgba(110,240,170,.5);
+  --ok-ink:#7df0ae;
+  --no-bg:rgba(255,110,100,.14);
+  --no-edge:rgba(255,143,134,.5);
+  --no-ink:#ff9c94;
+  --no-btn:#ff8f86;
+  --no-btn-fg:#2a0906;
+  --warn-ink:#ffc965;
+  --part-fill:rgba(190,255,220,.1);
+  --part-stroke:#63bd90;
+  --part-on:#3fe08c;
+  --part-on-stroke:#c4ffe0;
+  --ring:#c4ffe0;
+  color-scheme:dark;
+}
+
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{background:var(--bg);color:var(--fg);font-family:var(--font-body);font-size:16px;line-height:1.5;padding-inline:clamp(16px,4vw,32px);-webkit-font-smoothing:antialiased}
+button,input{font:inherit;color:inherit}
+h1,h2,h3,p,ul,dl,dd,figure{margin:0}
+ul{padding:0;list-style:none}
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+
+/* aurora */
+.aurora{position:fixed;inset:0;z-index:0;pointer-events:none;overflow:hidden}
+.blob{position:absolute;border-radius:50%;aspect-ratio:1}
+.blob.a{width:min(78vw,640px);left:-18%;top:-14%;background:radial-gradient(closest-side,var(--blob-a),transparent 72%);animation:drift-a 28s ease-in-out infinite alternate}
+.blob.b{width:min(70vw,560px);right:-16%;top:22%;background:radial-gradient(closest-side,var(--blob-b),transparent 72%);animation:drift-b 34s ease-in-out infinite alternate}
+.blob.c{width:min(80vw,680px);left:12%;bottom:-26%;background:radial-gradient(closest-side,var(--blob-c),transparent 72%);animation:drift-c 40s ease-in-out infinite alternate}
+@keyframes drift-a{to{transform:translate(12vw,10vh) scale(1.12)}}
+@keyframes drift-b{to{transform:translate(-10vw,-8vh) scale(1.08)}}
+@keyframes drift-c{to{transform:translate(8vw,-10vh) scale(1.15)}}
+
+/* glass */
+.glass{background:var(--spec),var(--glass);-webkit-backdrop-filter:blur(24px) saturate(1.7);backdrop-filter:blur(24px) saturate(1.7);border:1px solid var(--glass-edge);box-shadow:var(--glass-shadow),inset 0 1px 0 var(--glass-hi),inset 0 -14px 24px -18px var(--glass-lo);border-radius:28px}
+@supports not ((backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px))){.glass{background:var(--glass-solid)}}
+
+.app{position:relative;z-index:1;width:100%;max-width:1080px;margin-inline:auto;padding-block:14px 56px;display:grid;gap:16px;align-content:start}
+.view{display:grid;gap:16px;align-content:start;min-width:0}
+.view>*{min-width:0;animation:rise .5s cubic-bezier(.2,.8,.2,1) both}
+@keyframes rise{from{opacity:.55;transform:translateY(10px)}}
+
+/* top bar */
+.top{position:sticky;top:calc(env(safe-area-inset-top,0px) + 8px);z-index:20;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:8px 10px 8px 12px;border-radius:999px}
+.brand{display:flex;align-items:center;gap:10px;background:none;border:0;cursor:pointer;padding:4px 8px 4px 4px;border-radius:999px;font-family:var(--font-display);font-weight:600;font-size:15px;letter-spacing:-.01em}
+.brand .mark{width:32px;height:30px;color:var(--accent-ink);flex:none}
+.seg{display:inline-flex;gap:2px;padding:3px;border-radius:999px;background:var(--track)}
+.seg button{border:0;background:transparent;color:var(--fg-dim);cursor:pointer;height:34px;min-width:38px;padding:0 10px;border-radius:999px;display:inline-flex;align-items:center;justify-content:center;gap:6px;font-size:14px;font-weight:600}
+.seg button svg{width:18px;height:18px;flex:none}
+.seg button .lbl{display:none}
+@media(min-width:560px){.seg button .lbl{display:inline}}
+.seg button[aria-pressed="true"]{background:var(--btn-bg);color:var(--btn-fg);box-shadow:inset 0 1px 0 rgba(255,255,255,.4)}
+
+/* type */
+.display{font-family:var(--font-display);font-weight:700;letter-spacing:-.015em;line-height:1.18;text-wrap:balance}
+h1.display{font-size:clamp(1.9rem,6.4vw,3.3rem)}
+h2.display{font-size:clamp(1.15rem,3.4vw,1.5rem)}
+.eyebrow{font-size:12px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--accent-ink)}
+.hint{color:var(--fg-dim);font-size:14.5px}
+.lead{color:var(--fg-dim);font-size:clamp(1rem,2.4vw,1.15rem);max-width:46ch}
+
+/* buttons */
+.btn{appearance:none;border:0;cursor:pointer;font-weight:600;border-radius:999px;padding:12px 22px;min-height:48px;display:inline-flex;align-items:center;justify-content:center;gap:8px;transition:transform .15s,box-shadow .2s,background .2s}
+.btn svg{width:18px;height:18px;flex:none}
+.btn-primary{background:var(--btn-bg);color:var(--btn-fg);box-shadow:inset 0 1px 0 rgba(255,255,255,.45),0 10px 22px -8px var(--btn-glow)}
+.btn-ghost{background:var(--glass-2);color:var(--fg);border:1px solid var(--glass-edge);box-shadow:inset 0 1px 0 var(--glass-hi)}
+.btn-sm{min-height:40px;padding:8px 16px;font-size:14px}
+.btn:active:not(:disabled){transform:scale(.98)}
+.btn:disabled{opacity:.45;cursor:not-allowed;box-shadow:none}
+@media(hover:hover){.btn-primary:hover:not(:disabled){transform:translateY(-1px)}.btn-ghost:hover:not(:disabled){background:var(--glass-3)}}
+
+/* home */
+.hero{padding:18px 4px 4px;display:grid;gap:12px}
+.panel{padding:clamp(16px,3vw,26px)}
+.modes{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));gap:16px}
+.mode{padding:clamp(18px,3vw,28px);display:grid;gap:14px;align-content:start}
+.mode p{color:var(--fg-dim)}
+.mode .btn{justify-self:start}
+.pills{display:flex;flex-wrap:wrap;gap:8px}
+.pill{font-size:13px;font-weight:600;padding:5px 12px;border-radius:999px;background:var(--accent-soft);color:var(--accent-ink)}
+.ref-head{display:grid;gap:6px;margin-bottom:16px}
+.ref{display:grid;gap:16px;grid-template-columns:minmax(0,1fr)}
+@media(min-width:880px){.ref{grid-template-columns:minmax(0,1fr) minmax(0,1fr);align-items:start}}
+.refside{display:grid;gap:14px;align-content:start;min-width:0}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{border:1px solid var(--glass-edge);background:var(--glass-2);color:var(--fg);border-radius:999px;padding:8px 14px;min-height:40px;font-size:14px;font-weight:600;cursor:pointer;box-shadow:inset 0 1px 0 var(--glass-hi)}
+.chip[aria-pressed="true"]{background:var(--btn-bg);color:var(--btn-fg);border-color:transparent}
+.detail{display:grid;gap:10px;padding:16px 18px;border-radius:22px;background:var(--glass-2);border:1px solid var(--glass-edge)}
+.detail h3{font-size:1.2rem}
+.detail .where{color:var(--fg-dim);font-size:14.5px}
+.detail .brief{font-weight:500}
+.fx{display:grid;gap:8px}
+.fx li{display:flex;gap:10px;align-items:flex-start;font-size:15px}
+.fx .tick{flex:none;color:var(--ok-ink);margin-top:2px}
+.foot{font-size:13px;color:var(--fg-dim);text-align:center;padding:4px 8px}
+
+/* diagram */
+.figure{padding:14px;display:grid;gap:8px;margin:0}
+.canvas{border-radius:22px;background:var(--glass-2);border:1px solid var(--glass-edge);padding:8px}
+.figcap{font-size:13px;color:var(--fg-dim);text-align:center}
+.brain{display:block;width:100%;height:auto;max-height:70vh}
+.brain .part :is(path,circle,ellipse){fill:var(--part-fill);stroke:var(--part-stroke);stroke-width:1.6;stroke-linejoin:round;transition:fill .3s,stroke .3s}
+.brain .part .fold{fill:none;stroke-width:1.1;stroke-linecap:round;stroke-linejoin:round;opacity:.55}
+.brain .part .stalk{fill:none;stroke-width:3.5;stroke-linecap:round}
+.brain .part.on :is(path,circle,ellipse){fill:var(--part-on);stroke:var(--part-on-stroke)}
+.brain .part.on .fold{fill:none}
+.brain .part.on .stalk{fill:none;stroke:var(--part-on-stroke)}
+.brain .ctx{fill:var(--part-fill);stroke:var(--part-stroke);stroke-width:1.4;opacity:.6}
+.brain .lbl{font-size:10.5px;fill:var(--fg-dim);font-family:var(--font-body)}
+.brain .ring{fill:none;stroke:var(--ring);stroke-width:2.2;stroke-dasharray:6 5;transform-box:fill-box;transform-origin:center;animation:pulse 2s ease-in-out infinite;pointer-events:none}
+@keyframes pulse{0%,100%{transform:scale(1);opacity:.95}50%{transform:scale(1.1);opacity:.6}}
+.brain .part[tabindex]{cursor:pointer}
+.brain .part[tabindex]:focus-visible{outline:none}
+.brain .part[tabindex]:focus-visible :is(path,circle,ellipse){stroke:var(--accent);stroke-width:3.2}
+@media(hover:hover){.brain .part:not(.on)[tabindex]:hover :is(path,circle,ellipse){fill:var(--accent-soft)}}
+
+/* quiz */
+.qhead{display:grid;grid-template-columns:auto minmax(0,1fr);align-items:center;gap:10px 14px;padding:12px 14px;border-radius:26px}
+.qtitle{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:2px 12px;min-width:0}
+.qtitle .display{font-size:1.05rem}
+.count{font-size:14px;color:var(--fg-dim);font-variant-numeric:tabular-nums}
+.prog{grid-column:1/-1;height:8px;border-radius:99px;background:var(--track);overflow:hidden}
+.prog>i{display:block;height:100%;width:var(--w);background:var(--btn-bg);border-radius:inherit;transition:width .45s cubic-bezier(.2,.8,.2,1)}
+.exitbar{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:10px 16px;padding:12px 16px;border-radius:22px}
+.exitbar .row{display:flex;gap:8px}
+.quiz{display:grid;gap:16px;grid-template-columns:minmax(0,1fr);align-items:start}
+@media(min-width:900px){
+  .quiz{grid-template-columns:minmax(0,5fr) minmax(0,6fr)}
+  .quiz>.figure{position:sticky;top:calc(env(safe-area-inset-top,0px) + 84px)}
+}
+.q{display:grid;gap:14px;align-content:start}
+.q h2:focus{outline:none}
+.opts{display:grid;gap:10px}
+.opt{display:flex;align-items:center;gap:12px;width:100%;text-align:left;padding:12px 16px;min-height:58px;border-radius:20px;border:1px solid var(--glass-edge);background:var(--glass-2);color:var(--fg);font-weight:500;cursor:pointer;box-shadow:inset 0 1px 0 var(--glass-hi);transition:transform .15s,background .2s,opacity .2s}
+.opt .key{width:32px;height:32px;border-radius:50%;display:grid;place-items:center;background:var(--accent-soft);color:var(--accent-ink);font-weight:700;font-size:14px;flex:none}
+.opt .otxt{flex:1;min-width:0}
+.opt .mark{flex:none;width:22px;height:22px;display:grid;place-items:center}
+.opt:disabled{cursor:default}
+.opt.ok{background:var(--ok-bg);border-color:var(--ok-edge)}
+.opt.ok .mark{color:var(--ok-ink)}
+.opt.no{background:var(--no-bg);border-color:var(--no-edge)}
+.opt.no .mark{color:var(--no-ink)}
+.opt.faded{opacity:.55}
+@media(hover:hover){.opt:hover:not(:disabled){transform:translateY(-1px);background:var(--glass-3)}}
+.fb{display:grid;gap:12px}
+.fb:empty{display:none}
+.banner{display:flex;gap:12px;align-items:flex-start;padding:14px 16px;border-radius:20px;border:1px solid}
+.banner.ok{background:var(--ok-bg);border-color:var(--ok-edge);color:var(--ok-ink)}
+.banner.no{background:var(--no-bg);border-color:var(--no-edge);color:var(--no-ink)}
+.banner .bico{flex:none;width:30px;height:30px;border-radius:50%;display:grid;place-items:center;border:2px solid currentColor}
+.banner strong{font-family:var(--font-display);font-weight:600;font-size:1.05rem;display:block}
+.banner p{color:var(--fg);font-size:15px;margin-top:2px}
+.recap{display:grid;gap:6px;padding:12px 16px;border-radius:20px;background:var(--glass-2);border:1px solid var(--glass-edge);font-size:15px}
+.recap p{color:var(--fg-dim)}
+.recap strong{color:var(--fg)}
+.actions{display:flex;flex-wrap:wrap;align-items:center;gap:10px 14px;margin-top:4px}
+.lab{font-weight:600;font-size:14px}
+.input{width:100%;min-height:52px;padding:12px 18px;border-radius:18px;border:1px solid var(--glass-edge);background:var(--glass-2);color:var(--fg);font-size:16px;box-shadow:inset 0 1px 0 var(--glass-hi),inset 0 2px 8px var(--glass-lo)}
+.input::placeholder{color:var(--fg-faint)}
+.stmts{display:grid;gap:10px}
+.stmt{display:flex;flex-wrap:wrap;align-items:center;gap:10px 14px;padding:12px 14px;border-radius:20px;background:var(--glass-2);border:1px solid var(--glass-edge);box-shadow:inset 0 1px 0 var(--glass-hi)}
+.stmt p{flex:1 1 220px;min-width:0;font-weight:500}
+.yn{display:inline-grid;grid-template-columns:1fr 1fr;gap:3px;padding:3px;border-radius:999px;background:var(--track);flex:0 0 auto;width:min(100%,196px)}
+.yn button{border:0;background:transparent;border-radius:999px;min-height:40px;padding:0 12px;font-weight:600;font-size:14.5px;color:var(--fg-dim);cursor:pointer}
+.yn button[aria-pressed="true"]{background:var(--btn-bg);color:var(--btn-fg);box-shadow:inset 0 1px 0 rgba(255,255,255,.4)}
+.yn button:disabled{cursor:default}
+@media(max-width:520px){.yn{flex:1 1 100%;width:100%}}
+.stmt.ok{background:var(--ok-bg);border-color:var(--ok-edge)}
+.stmt.no{background:var(--no-bg);border-color:var(--no-edge)}
+.stmt.no .yn button[aria-pressed="true"]{background:var(--no-btn);color:var(--no-btn-fg)}
+.note{flex:1 1 100%;display:flex;gap:8px;align-items:flex-start;font-size:14px}
+.stmt.ok .note{color:var(--ok-ink)}
+.stmt.no .note{color:var(--no-ink)}
+.note svg{flex:none;margin-top:2px;width:16px;height:16px}
+
+/* results */
+.result{display:grid;gap:20px;grid-template-columns:minmax(0,1fr);justify-items:start;padding:clamp(18px,3vw,30px)}
+@media(min-width:640px){.result{grid-template-columns:auto minmax(0,1fr);align-items:center;gap:28px}}
+.gauge{position:relative;width:172px;height:172px;flex:none}
+.gauge svg{width:100%;height:100%;display:block}
+.gt{fill:none;stroke:var(--track);stroke-width:12}
+.gb{fill:none;stroke-width:12;stroke-linecap:round;stroke:var(--accent);animation:fillg 1.1s .15s cubic-bezier(.2,.8,.2,1) both}
+.gb.warn{stroke:var(--warn-ink)}
+.gb.bad{stroke:var(--no-btn)}
+@keyframes fillg{from{stroke-dashoffset:339.3}}
+.gv{position:absolute;inset:0;display:grid;place-content:center;text-align:center}
+.gv .display{font-size:2rem;font-variant-numeric:tabular-nums}
+.gv small{font-size:13px;color:var(--fg-dim)}
+.rtext{display:grid;gap:10px;min-width:0;width:100%}
+.grade{display:inline-grid;place-items:center;min-width:1.5em;padding:0 .25em;border-radius:.4em;margin-left:.2em;background:var(--accent-soft);color:var(--accent-ink)}
+.grade.warn{background:rgba(190,120,0,.16);color:var(--warn-ink)}
+.grade.bad{background:var(--no-bg);color:var(--no-ink)}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(110px,1fr));gap:10px}
+.stats div{padding:10px 14px;border-radius:18px;background:var(--glass-2);border:1px solid var(--glass-edge)}
+.stats dt{font-size:12.5px;color:var(--fg-dim)}
+.stats dd{font-weight:700;font-size:1.15rem;font-variant-numeric:tabular-nums}
+.scale{font-size:13.5px;color:var(--fg-dim)}
+.sec-head{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:4px 12px;padding:0 4px}
+.errs{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,400px),1fr));gap:14px}
+.err{padding:18px 20px;display:grid;gap:10px;align-content:start}
+.err h3{font-size:1.1rem}
+.erow,.elist li{display:flex;gap:10px;align-items:flex-start;font-size:15px}
+.ei{flex:none;color:var(--no-ink);margin-top:2px}
+.ei svg{width:16px;height:16px;display:block}
+.elist{display:grid;gap:10px}
+.elist small{display:block;color:var(--fg-dim);font-size:13.5px;margin-top:2px}
+.eh{font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--fg-dim)}
+.recap2{font-size:14.5px;color:var(--fg-dim)}
+.recap2 strong{color:var(--fg)}
+.clean{display:flex;gap:12px;align-items:center;padding:18px 20px}
+.clean .bico{flex:none;width:34px;height:34px;border-radius:50%;display:grid;place-items:center;border:2px solid var(--ok-ink);color:var(--ok-ink)}
+.rlist{display:grid;gap:8px}
+.rrow{display:flex;gap:12px;align-items:center;padding:10px 14px;border-radius:18px;border:1px solid var(--glass-edge);background:var(--glass-2)}
+.rrow.ok{background:var(--ok-bg);border-color:var(--ok-edge)}
+.rrow.no{background:var(--no-bg);border-color:var(--no-edge)}
+.rrow .ricon{flex:none;display:grid;place-items:center}
+.rrow.ok .ricon{color:var(--ok-ink)}
+.rrow.no .ricon{color:var(--no-ink)}
+.rrow .rname{font-weight:600;flex:1;min-width:0}
+.rrow .rdet{font-size:13.5px;color:var(--fg-dim);text-align:right}
+@media(max-width:520px){.rrow{flex-wrap:wrap}.rrow .rdet{flex:1 1 100%;text-align:left}}
+.endact{display:flex;flex-wrap:wrap;gap:10px}
+
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  html{scroll-behavior:auto}
+}
+</style>
+
+<div class="aurora" aria-hidden="true"><span class="blob a"></span><span class="blob b"></span><span class="blob c"></span></div>
+<div class="app">
+  <header class="glass top">
+    <button type="button" class="brand" data-act="go-home" aria-label="Отделы мозга. Вернуться в меню">
+      <svg class="mark" viewBox="14 8 372 342" aria-hidden="true"><path fill="currentColor" d="M64 224L61.2 221.6L57.2 218.5L52.5 214.7L47.5 210.5L42.7 206L38.4 201.2L35 196.4L32 191.3L29.3 185.8L27 180.1L25 174.2L23.4 168.2L22.3 162L21.6 155.8L21.3 149.3L21.3 142.6L21.8 135.9L22.8 129.1L24.1 122.4L26 116L28.3 109.7L31.2 103.5L34.4 97.3L38.1 91.2L42.3 85.3L46.8 79.7L51.7 74.2L57 68.9L62.8 63.7L69 58.8L75.5 54L82.4 49.5L89.6 45.3L97 41.5L104.9 37.9L113.1 34.5L121.6 31.4L130.3 28.7L139.1 26.2L148 24L157 22.1L166.2 20.5L175.5 19.2L184.9 18.2L194.4 17.5L203.8 17.1L213.1 17L222.6 17.2L232.1 17.7L241.6 18.6L251 19.7L260.2 21.3L269.1 23.2L277.7 25.6L286 28.4L294.2 31.6L302.1 35.2L309.7 39.1L317.1 43.4L324 48L330.6 53L337.1 58.5L343.2 64.4L348.9 70.5L354.2 76.9L359.1 83.5L363.4 90.3L367.2 97.5L370.7 105.1L373.6 112.9L376.1 120.7L378.1 128.4L379.6 135.7L380.6 142.6L381 149.5L380.9 156.2L380.4 162.8L379.4 169L377.9 174.8L376 180L373.6 184.7L370.6 189.1L367.1 193L363.3 196.6L359.2 199.7L354.9 202.4L350.5 204.7L345.7 206.5L340.6 207.9L335.2 208.8L329.9 209.4L324.6 209.8L319.6 210L314.9 210L310.2 209.6L305.6 209L301.2 208.1L297.1 207.1L293.3 206.1L290 205L287.1 203.8L284.6 202.3L282.4 200.7L280.5 199.1L279 197.7L277.7 196.6L277 196L275 178L270 160L258 150L236 150L222 162L221 180L221 198L219.5 197.9L217.6 197.6L215.3 197.4L212.7 197.2L209.7 197L206.4 196.9L202.7 197L198.7 197.1L194.1 197.2L189.3 197.4L184.2 197.8L179 198.5L173.8 199.6L168.4 201.1L162.9 203.2L157.1 205.7L151.3 208.3L145.4 211.1L139.6 213.7L134 216L128.5 218.2L123 220.4L117.6 222.6L112.2 224.5L106.8 226.2L101.5 227.5L96.2 228.2L90.5 228.2L84.6 227.6L78.8 226.8L73.3 225.7L68.6 224.8L64.9 224.1L64 224Z"/><path fill="currentColor" d="M278 234L280.6 230.3L284.2 227.7L288.5 225.8L293.2 224.4L298 223L303.1 221.7L308.7 220.6L314.6 219.9L320.4 219.6L326 220L331.5 221L337.1 222.6L342.6 224.7L347.6 227.2L352 230L355.9 233.3L359.4 237.2L362.4 241.4L364.7 245.7L366 250L366.3 254.4L365.7 258.9L364.4 263.5L362.4 267.9L360 272L357 275.8L353.3 279.5L349.1 282.9L344.6 286.1L340 289L335.1 291.6L329.8 294L324.4 296.1L319 297.8L314 299L309.2 299.8L304.4 300.1L299.8 300.1L295.6 299.7L292 299L289 298.2L286.4 297.2L284.3 295.8L282.5 293.8L281 291L279.8 287.2L279.1 282.6L278.6 277.3L278.3 271.7L278 266L277.5 259.7L276.8 252.7L276.4 245.6L276.7 239.2L277.7 234.7Z"/><path fill="currentColor" d="M221 164C224 154 242 149 258 150C270 150 275 158 273 167C272 170 270 171 268 173C274 175 276 183 272 190C270 194 266 197 264 200L263 207L227 207C223 193 219 178 221 164ZM263 207L227 207C212 208 202 222 204 236C206 248 220 254 232 253L262 253C266 240 266 222 263 207ZM232 252L262 252C266 268 270 284 274 301L250 301C244 286 238 270 232 252Z"/></svg>
+      <span>Отделы мозга</span>
+    </button>
+    <div class="seg" role="group" aria-label="Тема оформления">
+      <button type="button" data-theme-set="light" aria-pressed="false" aria-label="Светлая тема">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.8v2.4M12 18.8v2.4M2.8 12h2.4M18.8 12h2.4M5.5 5.5l1.7 1.7M16.8 16.8l1.7 1.7M5.5 18.5l1.7-1.7M16.8 7.2l1.7-1.7"/></svg>
+        <span class="lbl">Светлая</span>
+      </button>
+      <button type="button" data-theme-set="dark" aria-pressed="false" aria-label="Тёмная тема">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 14.5A8.5 8.5 0 0 1 9.5 4 8.5 8.5 0 1 0 20 14.5Z"/></svg>
+        <span class="lbl">Тёмная</span>
+      </button>
+    </div>
+  </header>
+  <main class="view" id="view"></main>
+</div>
+
+<script>
+(function(){
+'use strict';
+
+/* ---------- данные: отделы мозга ---------- */
+const PARTS=[
+{id:'medulla',name:'Продолговатый мозг',aliases:['продолговатый мозг','продолговатый'],
+ where:'Основная часть ствола мозга. Внизу переходит в спинной мозг.',
+ brief:'Проводящие пути и жизненно важные центры: дыхание, сосуды, защитные и пищеварительные рефлексы.',
+ good:['Проводит нервные импульсы от спинного мозга к высшим отделам мозга','В нём находится дыхательный центр','Содержит центры защитных рефлексов: чихания, кашля, рвоты','Содержит центры глотания и слюноотделения','Участвует в регуляции тонуса артерий и давления','Относится к заднему мозгу вместе с мостом и мозжечком'],
+ bad:['Координирует медленные произвольные движения с позой тела','Содержит высшие центры болевой чувствительности','Содержит центры голода и жажды','Содержит высшие центры зрительных ощущений'],
+ similar:['pons','midbrain'],ring:[253,276,32,36],
+ svg:'<path d="M232 252L262 252C266 268 270 284 274 301L250 301C244 286 238 270 232 252Z"/>'},
+{id:'pons',name:'Варолиев мост',aliases:['варолиев мост','мост','варолиев'],
+ where:'Над продолговатым мозгом, перед мозжечком. В учебнике называется просто «мост».',
+ brief:'Часть заднего мозга: проводящий путь между корой, мозжечком и спинным мозгом.',
+ good:['Проводит нервные импульсы между спинным мозгом и вышележащими отделами','Связывает кору больших полушарий с мозжечком','Относится к заднему мозгу вместе с продолговатым мозгом и мозжечком'],
+ bad:['Содержит центры голода и жажды','Содержит высшие слуховые центры','Реагирует на быстро движущиеся объекты в поле зрения','Обеспечивает точность быстрых произвольных движений'],
+ similar:['medulla','cerebellum'],ring:[234,230,45,35],
+ svg:'<path d="M263 207L227 207C212 208 202 222 204 236C206 248 220 254 232 253L262 253C266 240 266 222 263 207Z"/>'},
+{id:'cerebellum',name:'Мозжечок',aliases:['мозжечок'],
+ where:'Позади продолговатого и среднего мозга, на задней стороне ствола.',
+ brief:'Регулирует позу и мышечный тонус, координирует произвольные движения и делает их точными.',
+ good:['Регулирует позу тела и поддерживает мышечный тонус','Координирует медленные произвольные движения с позой всего тела','Обеспечивает точность быстрых произвольных движений','При его поражении человек не может стоять с закрытыми глазами','Относится к заднему мозгу вместе с продолговатым мозгом и мостом'],
+ bad:['Содержит дыхательный центр','Обрабатывает информацию от органов чувств и передаёт её в кору','Содержит центры голода и жажды','Содержит центры чихания, кашля и рвоты'],
+ similar:['pons','cortex'],ring:[321,260,60,54],
+ svg:'<path d="M278 234L278.7 232.6L279.6 231.4L280.6 230.3L281.7 229.4L282.9 228.5L284.2 227.7L285.5 227L287 226.4L288.5 225.8L290 225.3L291.6 224.8L293.2 224.4L294.8 223.9L296.4 223.5L298 223L299.6 222.5L301.3 222.1L303.1 221.7L304.9 221.3L306.8 220.9L308.7 220.6L310.7 220.3L312.6 220.1L314.6 219.9L316.5 219.7L318.5 219.7L320.4 219.6L322.3 219.7L324.2 219.8L326 220L327.8 220.3L329.7 220.6L331.5 221L333.4 221.5L335.3 222L337.1 222.6L339 223.2L340.8 223.9L342.6 224.7L344.3 225.4L346 226.3L347.6 227.2L349.1 228.1L350.6 229L352 230L353.3 231L354.6 232.2L355.9 233.3L357.1 234.6L358.3 235.9L359.4 237.2L360.5 238.6L361.5 240L362.4 241.4L363.3 242.8L364 244.3L364.7 245.7L365.2 247.2L365.7 248.6L366 250L366.2 251.4L366.3 252.9L366.3 254.4L366.2 255.9L366 257.4L365.7 258.9L365.3 260.4L364.9 261.9L364.4 263.5L363.8 265L363.1 266.4L362.4 267.9L361.7 269.3L360.8 270.7L360 272L359.1 273.3L358.1 274.6L357 275.8L355.8 277.1L354.6 278.3L353.3 279.5L351.9 280.7L350.5 281.8L349.1 282.9L347.6 284L346.1 285.1L344.6 286.1L343.1 287.1L341.5 288.1L340 289L338.4 289.9L336.8 290.8L335.1 291.6L333.4 292.4L331.6 293.2L329.8 294L328 294.7L326.2 295.4L324.4 296.1L322.6 296.7L320.8 297.2L319 297.8L317.3 298.2L315.6 298.6L314 299L312.4 299.3L310.8 299.6L309.2 299.8L307.6 299.9L306 300L304.4 300.1L302.8 300.1L301.3 300.1L299.8 300.1L298.4 300L297 299.8L295.6 299.7L294.4 299.5L293.1 299.3L292 299L290.9 298.7L289.9 298.5L289 298.2L288.1 297.9L287.2 297.6L286.4 297.2L285.7 296.8L285 296.3L284.3 295.8L283.7 295.2L283.1 294.6L282.5 293.8L282 293L281.5 292L281 291L280.6 289.8L280.2 288.6L279.8 287.2L279.5 285.7L279.3 284.2L279.1 282.6L278.9 280.9L278.7 279.1L278.6 277.3L278.5 275.5L278.4 273.6L278.3 271.7L278.2 269.8L278.1 267.9L278 266L277.9 264L277.7 261.9L277.5 259.7L277.3 257.4L277 255.1L276.8 252.7L276.6 250.3L276.5 247.9L276.4 245.6L276.4 243.4L276.5 241.2L276.7 239.2L277 237.3L277.4 235.5L277.7 234.7Z"/><path class="fold" d="M292.7 231.1L294.1 230.5L295.6 229.8L297.1 229.2L298.7 228.5L300.3 227.9L301.8 227.4L303.4 226.9L305.1 226.6L306.9 226.3L308.7 226.2L310.5 226.1L312.4 226.1L314.2 226.2L316 226.3L317.8 226.3L319.5 226.4L321.2 226.5L322.8 226.5L324.4 226.5L326 226.5L327.6 226.6L329.3 226.7L331.1 226.8L332.8 227L334.6 227.4L336.3 227.8L338 228.4L339.7 229.1L341.2 229.9L342.7 230.9L344 231.8L345.3 232.8L346.5 233.8L347.6 234.8L348.6 235.7L349.6 236.7L350.6 237.7L351.7 238.7L352.8 239.7L353.9 240.8L354.9 241.8L356 242.8L357 243.9L357.9 245L358.7 246.1L359.5 247.2L360 248.3L360.5 249.4L360.8 250.5L360.9 251.5L361 252.5L360.9 253.6L360.7 254.7L360.4 255.9L360 257L359.5 258.2L359 259.4L358.4 260.6L357.8 261.8L357.3 263L356.7 264.2L356.1 265.4L355.5 266.6L354.9 267.8L354.4 269L353.7 270.1L353 271.3L352.2 272.5L351.3 273.8L350.3 275L349.2 276.1L347.9 277.2L346.6 278.3L345.2 279.2L343.7 280.1M339 282.4L337.5 283.1L336 283.7L334.5 284.4L332.9 285.1L331.3 285.9L329.8 286.7L328.2 287.6L326.6 288.5L325 289.4L323.3 290.3L321.7 291.1L320.1 291.8L318.4 292.4L316.8 293L315.2 293.4L313.7 293.7L312.2 293.8L310.7 293.9L309.2 293.9L307.8 293.9L306.3 293.8L304.9 293.7L303.5 293.6L302.1 293.4L300.8 293.3L299.5 293.2L298.3 293.1L297.1 293.1L296 293L294.9 293L293.9 292.9L293 292.8L292.5 292.7M292.2 237.9L293.2 237.4L294.4 236.9L295.7 236.2L297.2 235.6L298.7 235L300.4 234.3L301.9 233.7L303.3 233.2L304.8 232.8L306.4 232.5L308 232.2L309.7 232.1L311.4 232L313.1 232.1L314.8 232.1L316.4 232.2L318 232.3L319.6 232.4L321 232.5L322.4 232.5L323.8 232.5L325.1 232.5L326.5 232.5L328.1 232.5L329.6 232.6L331.2 232.8L332.8 233.1L334.4 233.5L335.9 234L337.3 234.7L338.7 235.4L340 236.2L341.2 237.1L342.3 238L343.2 238.8L344.1 239.7L344.9 240.4L345.7 241.3L346.5 242.1L347.4 242.9L348.4 243.8L349.3 244.6L350.2 245.5L351.1 246.3L352 247.2L352.7 248L353.4 248.9L354 249.7L354.4 250.5L354.8 251.2L354.9 251.8L355 252.3L355 252.9L354.9 253.6L354.7 254.3L354.4 255.1L354.1 255.9L353.7 256.8L353.2 257.7L352.8 258.6L352.3 259.6L351.8 260.5L351.3 261.5L350.8 262.6L350.3 263.6L349.9 264.6L349.5 265.5L349 266.4L348.5 267.4L347.9 268.4L347.1 269.5L346.2 270.6L345.2 271.6L344.1 272.6L342.9 273.5L341.6 274.4L340.3 275.2L338.8 275.9L337.4 276.6L335.9 277.3L334.4 277.9L333 278.5L331.6 279.1L330.2 279.8L328.8 280.5L328 280.9M323.6 283.3L322.1 284.2L320.5 285L319 285.7L317.5 286.4L316 287L314.5 287.4L313.1 287.7L311.7 287.9L310.4 288L309.1 288L307.8 288L306.5 287.9L305.3 287.8L304 287.6L302.8 287.5L301.6 287.4L300.5 287.3L299.4 287.2L298.3 287.1L297.3 287.1L296.4 287.1L295.6 287L294.9 287L294 286.9L293.2 286.9L292.5 286.8L292.1 286.8M294.1 242.1L294.2 242.3L293.9 242.9L293.6 243.5L293.4 243.9L293.2 244.1L293.3 244.1L293.5 244L294 243.7L294.7 243.3L295.7 242.9L296.8 242.3L298.1 241.7L299.5 241.1L301.1 240.4L302.8 239.8L304.1 239.2L305.5 238.8L306.9 238.5L308.4 238.2L309.9 238L311.5 238L313.1 238L314.6 238.1L316.1 238.2L317.6 238.3L319 238.4L320.3 238.4L321.5 238.5L322.6 238.4L323.6 238.4L324.8 238.4L326.1 238.4L327.5 238.4L328.9 238.5L330.3 238.7L331.7 239L333.1 239.4L334.4 239.9L335.7 240.5L336.8 241.2L337.9 242L338.8 242.8M342.5 246.5L343.2 247.2L343.9 247.8L344.7 248.5L345.5 249.2L346.2 249.8L346.9 250.4L347.6 251.1L348.1 251.6L348.5 252.2L348.8 252.6L349 253L349.1 253.2L349.1 253.2L349 253.3L348.9 253.5L348.7 253.9L348.5 254.3L348.2 254.8L347.8 255.4L347.5 256L347.1 256.7L346.7 257.4L346.3 258.1L345.9 258.9L345.5 259.7L345.2 260.5L344.8 261.4L344.6 262L344.3 262.7L344 263.5L343.5 264.3L342.9 265.2L342.2 266.2L341.3 267.1L340.3 268L339.2 268.8L338.1 269.6L336.8 270.3L335.5 271L334.1 271.6L332.7 272.2L331.3 272.8L330 273.3L328.8 273.8L327.5 274.4L326.2 275.1L324.8 275.8L323.5 276.5L322.1 277.3L320.7 278.2L319.3 279L317.9 279.7L316.4 280.4L315 280.9L313.7 281.4L312.3 281.7L311.1 281.9L309.9 282.1L308.8 282.1L307.7 282L306.6 281.9L305.5 281.8L304.4 281.7L303.3 281.6L302.3 281.4L301.3 281.3L300.3 281.3L299.4 281.2L298.5 281.2L297.8 281.2L297.1 281.2L296.5 281.2L296.3 281.2M294.2 281.5L294.6 281.7L295 282.1L295.5 282.6L296 283.1L296.4 283.6L296.7 284L296.8 284.3L296.9 284.4L296.9 284.3L297 284.3L297 284L297 283.4L297.1 282.6L297.1 281.6L297.2 280.4L297.2 279L297.3 277.6L297.3 276L297.2 274.4L297.1 272.6L297 270.8L296.7 268.9L296.4 267L296 265L295.6 262.7L295.2 260.4L294.8 258L294.4 255.7L294.2 253.5L294.1 251.2L294.1 249.1L294.3 247.1L294.5 245.2L294.8 243.7L295.1 242.4L295.3 241.5L295.4 241L295.3 241.1L295.4 240.8"/><path class="fold" style="stroke-width:1.4;opacity:.7" d="M284 262C296 258 308 256 322 258M300 258C304 246 314 240 326 238M312 258C324 252 338 252 350 256M300 259C306 272 318 280 332 282M288 266C290 278 296 286 304 290"/>'},
+{id:'midbrain',name:'Средний мозг',aliases:['средний мозг','средний'],
+ where:'Часть ствола мозга. На поверхности — четверохолмие (четыре небольших бугорка).',
+ brief:'Первичная обработка зрительных и слуховых сигналов, двигательные центры для тонуса мышц и позы.',
+ good:['Верхние бугры четверохолмия — центры первичной обработки зрительной информации','Нижние бугры четверохолмия — центры первичной обработки слуховых сигналов','Реагирует на быстро движущиеся объекты и резкие громкие звуки','Двигательные центры вместе с мозжечком поддерживают тонус мышц и позу'],
+ bad:['Содержит дыхательный центр','Содержит высшие центры болевой чувствительности','Содержит центры голода и жажды','Соединяет два полушария мозга'],
+ similar:['thalamus','pons'],ring:[248,178,41,41],
+ svg:'<path d="M221 164C224 154 242 149 258 150C270 150 275 158 273 167C272 170 270 171 268 173C274 175 276 183 272 190C270 194 266 197 264 200L263 207L227 207C223 193 219 178 221 164Z"/>'},
+{id:'thalamus',name:'Таламус',aliases:['таламус','зрительный бугор','зрительные бугры'],
+ where:'Верхняя часть промежуточного мозга, в глубине полушарий.',
+ brief:'Обрабатывает информацию от органов чувств (кроме обоняния) и передаёт её в кору. Здесь центры боли.',
+ good:['Обрабатывает информацию от органов чувств, кроме обонятельной','Частично обработанную информацию передаёт в кору больших полушарий','В нём находятся высшие центры болевой чувствительности','Нейроны помогают оценить течение времени (внутренние часы)','Относится к переднему мозгу (входит в промежуточный мозг)'],
+ bad:['Содержит центры голода и жажды','Содержит дыхательный центр','Обеспечивает точность быстрых произвольных движений','Выделяет в кровь регуляторы, управляющие гипофизом'],
+ similar:['hypothalamus','midbrain'],ring:[212,130,54,35],
+ svg:'<path d="M174 130C172 114 192 106 214 108C238 110 252 120 250 136C248 150 230 154 208 152C186 150 176 144 174 130Z"/>'},
+{id:'hypothalamus',name:'Гипоталамус',aliases:['гипоталамус','подбугорье'],
+ where:'Нижняя часть промежуточного мозга, под таламусом. Ножкой соединён с гипофизом.',
+ brief:'Главный нейроэндокринный орган: управляет гипофизом. Здесь центры голода и жажды.',
+ good:['Его нейроны выделяют в кровь регуляторы, управляющие деятельностью гипофиза','В нём расположены центры голода и жажды','Влияет на эмоции и работу внутренних органов','Участвует в терморегуляции, регуляции давления и сердечного ритма','Относится к переднему мозгу (входит в промежуточный мозг)'],
+ bad:['Обрабатывает всю информацию от органов чувств, кроме обонятельной','Содержит высшие центры болевой чувствительности','Реагирует на быстро движущиеся объекты в поле зрения','Обеспечивает точность быстрых произвольных движений'],
+ similar:['thalamus','pituitary'],ring:[195,171,36,25],
+ svg:'<path d="M170 160C180 156 202 156 216 160C220 170 214 182 200 184C184 186 172 176 170 160Z"/>'},
+{id:'pituitary',name:'Гипофиз',aliases:['гипофиз','мозговой придаток'],
+ where:'Маленькая железа под мозгом. Особой ножкой соединена с гипоталамусом.',
+ brief:'Одна из важнейших желёз внутренней секреции: управляется гипоталамусом и регулирует другие железы.',
+ good:['Одна из важнейших желёз внутренней секреции','Особой ножкой соединён с гипоталамусом','Вырабатывает гормон роста','Управляет работой других желёз (щитовидной, надпочечников, половых)','Его деятельностью управляет гипоталамус'],
+ bad:['Содержит дыхательный центр','Обеспечивает точность быстрых произвольных движений','Содержит высшие слуховые центры','Реагирует на быстро движущиеся объекты в поле зрения'],
+ similar:['pineal','hypothalamus'],ring:[184,209,18,32],
+ svg:'<path class="stalk" d="M190 184C190 196 187 204 185 212"/><circle cx="184" cy="222" r="9.5"/>'},
+{id:'pineal',name:'Эпифиз',aliases:['эпифиз','шишковидное тело','шишковидная железа'],
+ where:'Маленькая железа над таламусом. Ещё её называют шишковидным телом.',
+ brief:'Железа внутренней секреции: вырабатывает мелатонин, помогает задавать суточный ритм сна и бодрствования.',
+ good:['Вырабатывает гормон мелатонин','Помогает регулировать суточные ритмы: сон и бодрствование','Относится к железам внутренней секреции','Реагирует на смену дня и ночи'],
+ bad:['Содержит дыхательный центр','Содержит высшие центры болевой чувствительности','Обеспечивает точность быстрых произвольных движений','Содержит центры голода и жажды'],
+ similar:['pituitary','thalamus'],ring:[264,125,19,20],
+ svg:'<path d="M258 120C264 114 274 118 273 126C272 134 262 136 257 131C254 127 255 123 258 120Z"/>'},
+{id:'cortex',name:'Кора больших полушарий',aliases:['кора больших полушарий','кора головного мозга','кора','большие полушария','кора полушарий','кора больших полушарий головного мозга'],
+ where:'Тонкий слой серого вещества толщиной несколько миллиметров. Покрывает большие полушария, образует извилины и борозды.',
+ brief:'Самое молодое образование мозга. Контролирует всю деятельность человека и служит основой психической деятельности.',
+ good:['Самое молодое в эволюции образование мозга человека','Вся деятельность человека находится под её контролем','Складки коры (извилины) увеличивают её поверхность','В затылочной доле формируется зрительное изображение','В височных долях расположены высшие слуховые центры','В передней центральной извилине находятся высшие центры произвольных движений','Лобная ассоциативная зона связана со способностью к обучению'],
+ bad:['Содержит дыхательный центр','Содержит центры голода и жажды','Является частью ствола мозга','Относится к заднему мозгу'],
+ similar:['cerebellum','thalamus'],ring:null,
+ svg:'<path d="M64 224L63.2 223.3L62.1 222.7L60.9 221.9L59.6 221.2L58.2 220.2L56.7 219.1L55.4 217.6L54.6 215.5L52.3 215L50.2 214.2L48.2 213.1L46.5 211.7L44.9 210.1L43.4 208.4L42.2 206.5L41.1 204.4L40.3 202.3L39.9 199.9L38.1 198.8L36.4 197.7L35 196.4L33.6 194.9L32.4 193.3L31.3 191.6L30.4 189.8L29.8 187.9L29.5 185.8L29.9 183.4L27.4 182.2L25.8 180.6L24.6 178.8L23.8 176.8L23.4 174.7L23.5 172.5L24.3 170.1L23.2 168.2L22 166.3L21.2 164.3L20.9 162.3L20.9 160.1L21.3 158L22 155.8L23.2 153.6L22.5 151.5L21.7 149.3L21.1 147.1L20.8 144.9L20.6 142.6L20.6 140.3L20.7 138L20.9 135.8L21.2 133.5L21.6 131.2L22.2 129L23 126.8L24.1 124.7L24.6 122.6L24.4 120.2L24.5 117.9L24.9 115.6L25.4 113.4L26.2 111.3L27.2 109.2L28.3 107.2L29.8 105.4L31.6 103.6L34 102.3L34.1 99.8L34.4 97.3L35.2 95L36.2 92.8L37.7 90.9L39.6 89.3L42.3 88.3L42 85.2L42.7 82.6L43.8 80.4L45.4 78.5L47.2 76.8L49.5 75.5L52.2 74.7L53.3 72.3L54.6 70L56.2 68.1L58.1 66.3L60.2 64.7L62.4 63.2L64.7 61.9L67.3 60.9L70.1 60.1L71.9 58.1L73.4 55.6L75.1 53.4L77.2 51.5L79.4 49.9L82 48.8L85.1 48.7L86.7 46L88.7 43.7L91.1 42.3L94 41.7L97.6 42.7L99.3 39.5L101.7 37.9L104.6 37.2L107.9 37.5L110.6 36.3L113 34.2L115.7 32.9L118.7 32.2L121.8 32L124.8 31.4L127.2 29L129.9 27.3L132.7 26L135.7 25.2L138.8 24.7L141.9 24.7L145.2 25.4L148 24.1L150.8 22.7L153.8 21.8L156.8 21.3L160 21.2L163.2 21.7L166.4 22.1L169.2 20L172.3 18.7L175.4 18.2L178.6 18.5L181.8 19.1L184.8 17L187.9 16L191.1 15.8L194.3 16.2L197.5 17.3L200.7 18L203.8 16.9L206.9 16.5L210 16.4L213.1 16.4L216.3 16.5L219.4 16.6L222.6 16.9L225.7 17.2L228.9 17.9L232 19.2L235.3 17.6L238.6 16.9L241.8 16.7L245 17L248.1 18.1L251 20.1L254.1 20.2L257.4 19.9L260.4 20.4L263.3 21.8L265.9 24.1L269 23.9L272.1 23.6L275.1 24L277.9 24.9L280.5 26.4L282.7 29L286.2 28L289.3 28.1L292.2 28.7L295 29.8L297.5 31.2L299.9 33L302 35.3L304.2 37.5L307.2 37.8L310 38.6L312.6 39.9L314.9 41.5L316.9 43.6L318.3 46.6L321.6 46.6L324.5 47.3L326.9 48.7L328.9 50.8L329.9 54L333.6 53.9L336.2 55.2L338.2 57.2L339.5 60L341.2 62.3L344 63.5L346.1 65.4L347.8 67.8L349 70.4L349.7 73.5L351.6 75.5L354.1 77L356.2 78.9L358.1 80.9L359.8 83L361.3 85.3L362.6 87.6L363.7 90.1L364.4 92.8L365.7 95.2L368 97.1L369.8 99.3L371.3 101.8L372.3 104.4L372.9 107.2L372.8 110.2L372.1 113.4L374.5 115.5L375.9 117.9L376.7 120.5L377.1 123.2L377 126L375.7 128.9L378.3 130.9L379.7 133.2L380.7 135.5L381.4 137.8L381.7 140.1L381.8 142.5L381.6 144.8L381 147.2L380 149.5L381.2 151.8L381.7 154L382 156.3L382 158.5L381.8 160.7L381.6 162.9L381.2 165L380.7 167.1L380.1 169.1L379.4 171.1L378.6 172.9L377.8 174.7L376.8 176.4L375.5 177.9L373.7 179L374.4 181.2L374.3 183.1L374 185L373.5 186.8L372.7 188.5L371.7 190L370.5 191.3L369.1 192.5L367.4 193.3L365.1 193.4L365 195.8L364.2 197.6L363 199.1L361.7 200.2L360.2 201.1L358.5 201.7L356.6 202L354.5 201.8L353.2 202.7L352.1 204.2L350.8 205.3L349.3 206.2L347.7 206.8L345.9 207.2L344.1 207.3L342.3 207.2L340.4 206.8L338.4 205.7L336.9 207.5L335.2 208.6L333.5 209.4L331.7 210L329.9 210.5L328.2 210.8L326.4 211L324.6 211L322.9 210.9L321.2 210.6L319.6 210.2L318 209.4L316.5 209.7L314.9 210.5L313.3 211L311.6 211.3L310 211.3L308.5 211.2L306.9 211L305.4 210.5L304 209.8L302.6 209L301.3 207.8L300.3 206L298.6 206.8L297.1 207.1L295.7 207.2L294.4 207L293.1 206.7L292 206.3L290.9 205.8L290 205.1L289.1 204.3L288.4 203.4L287.9 202.3L286.9 202.1L285.7 202.3L284.7 202.2L283.7 201.9L282.9 201.5L282.2 201L281.5 200.5L280.9 199.9L280.3 199.4L279.8 198.8L279.3 198.3L278.9 197.8L278.5 197.3L278.1 196.9L277.7 196.6L277.3 196.2L277 196L275 178L270 160L258 150L236 150L222 162L221 180L221 198L220.6 198L220.1 197.9L219.5 197.9L218.9 197.9L218.3 197.8L217.6 197.8L216.9 197.8L216.1 197.7L215.3 197.7L214.5 197.7L213.6 197.6L212.7 197.6L211.7 197.5L210.7 197.4L209.7 197.3L208.6 197L207.5 197.1L206.4 197.4L205.2 197.6L204 197.8L202.8 198L201.5 198.1L200.1 198.1L198.7 198L197.2 198L195.7 197.8L194.2 197.7L192.6 197.5L190.9 197.2L189.3 197L187.6 196.6L185.8 196.4L184.2 197L182.4 197.4L180.7 197.9L179 198.3L177.3 198.8L175.5 199.3L173.8 199.7L172 200.2L170.3 200.6L168.4 200.9L166.5 201.6L164.9 202.9L163.2 204.1L161.4 205.1L159.6 206L157.6 206.7L155.5 207.2L153.1 207.2L151.5 208.8L149.7 210L147.7 210.9L145.7 211.6L143.6 212.2L141.5 212.7L139.4 213L137.3 213.4L135.6 214.6L133.8 215.6L132.1 216.5L130.3 217.3L128.5 218.2L126.7 219.1L124.9 219.9L123.1 220.7L121.3 221.6L119.5 222.3L117.7 223.1L115.9 223.7L114.1 224.3L112.2 224.8L110.3 224.9L108.7 226L107 226.8L105.2 227.4L103.4 227.9L101.7 228.3L99.9 228.6L98.1 228.7L96.3 228.8L94.4 228.6L92.5 228.4L90.5 228L88.6 227.4L86.7 226.4L84.7 226.9L82.7 227L80.7 226.9L78.7 226.8L76.9 226.5L75.1 226.1L73.3 225.7L71.7 225.2L70.1 225L68.6 224.8L67.2 224.6L66 224.4L64.9 224.2L64 224Z"/><path style="fill:var(--part-stroke);stroke:none;opacity:.2" d="M92 138C86 100 128 70 196 68C264 66 312 92 308 130C307 142 292 146 284 136C282 108 244 82 196 82C150 82 118 108 112 134C110 148 98 152 92 138Z"/><path class="fold" d="M53.4 199.4L50.9 197.8L49.1 195.7L48.8 192.7L47.1 191.4L46.2 189.4L45.7 186.8L45.5 184.1L45.3 181.4L45.3 178.6L44.3 176.4L41.4 174.8L39.4 172.7L38.7 170.1L39.4 167.2L39.5 164.6L38.3 162.2L37.6 159.8L37.1 157.3L36.8 154.6L36.5 151.9L33.6 149.1L32.2 146.1M34.2 138.2L35.8 135.3L37.3 132.6L38.5 129.9L40.4 127.4L39.3 124.2L39.5 121.5L40.7 118.9L42.5 116.6L44.8 114.4L47 112.3L49.6 110.4L48.2 106.3L47.4 102.3L47.6 98.7L49.5 96.1L51.7 93.7L52.9 90.6L53.6 89.7M60.1 85.2L63 83.5L64.3 80L66.9 77.7L70.5 76.4L74.6 75.8L78.8 75.4L82.5 74.5L83.6 69.9L84.9 65.4L87 61.7L90.3 59.9L93.4 57.6L96.5 55.1L100.3 54.2L104.1 52.9L106.9 49.5L111.1 48.8L115.7 49.1L119.9 48.3L124.6 49L129.4 50L132.5 45.9L135.9 42.1L138.3 40.2M151.4 38.7L155.2 36.1L159.2 33.7L163.6 32.8L168.3 33.9L172.7 33L177.4 34.3L182.1 36.6L186.4 34.3L190.7 32.2L195.2 32.1L199.8 34.3L204.2 33.5M219.1 28.5L223.7 28.2L228.2 30.2L232.6 32.6L237.1 32.7L241.6 32.9L246 33.8L250.1 36.5L254.5 36.3L258.4 38.3L261.9 41.5L266.4 39.6L271.1 37.8L275.5 37.4M283.5 39.5L287.1 41.4L290.5 43.9L293.8 46.4L296.6 49.7L300.5 50.6L303.7 52.8L306.1 56.2L307.8 60.4L311.2 61.9L315.6 61.9L319.5 62.9L323.3 64.1L327.8 64.8L330.1 68.2L331.6 72.2L335.1 74.1L337.8 76.9L339.6 80.4L341.6 83.7L344 86.5M348.7 101.4L352.3 103.5L356.2 105.6L358.7 108.7L359.4 112.5L358.7 116.8L360.8 120L363.6 123L365.3 126.4L365.3 130.1L366.3 133.5L366.7 136.8L365.9 140.1L364.7 143.2M366.3 157.4L366.1 160.1L365.4 162.7L364.5 165.1L363.8 167.3L363.3 169.6L363 171.7L362.4 173.6L363.4 175.9L364.3 178.4L364.1 180.6L363 182.3L361.1 183.3L358.4 183.6L354.9 182.7L354.3 184.8L352.9 186.1L351.3 187.2L349.4 187.9L347.2 188L345.5 188.7L344.5 190.5L343.3 191.3L342.8 191.4M335.1 188.4L333.4 190.9L331.5 192.9L329.4 194.9L327.1 196.8L324.8 198.3L322.4 199L320.1 199L317.8 197.8L316 198.1L314.1 198.2L312.2 197.8L310.3 197L308.5 196.1L306.7 195L305 193.6L303.7 191.4L301.5 192.6L299.6 192.9L298 192.6L296.5 191.9L295.4 190.8L295 189.5"/><path class="fold" d="M66.9 184.9L66.1 182.6L65.5 180.8L65.5 179.2L63.7 179.9L62 179.5L60.5 178.3L59.6 176.6L59.1 174.6L59 172.4L58 170.7L54.7 169.7L52.1 168.4L50.4 166.6L50.2 164.4L49.8 162.2L49 160.2L49.8 158L51.5 155.7L53.6 153.3L55.6 150.9L54.5 149.5M56.3 130.3L54.2 127.6L52.7 124.9L52.1 122.1L52.7 119.7L54.5 117.8L57.6 116.4L60.7 115.2L61.1 112.5L62 110L63.4 107.8L65.8 106.2L66.8 103.7L68.3 101.4L69.9 100.4M92.2 78.1L94.4 75.4L97.3 73.5L100.8 72.8L103.5 70.6L106.1 70.5M134.3 60.5L137.4 56.8L140.7 53.8L144.5 51.8L148.8 52L153.5 54.2L157.7 54.2L161.9 54.7L163.3 54.8M172.6 52.6L176.5 50L180.7 49.8L185.1 50.9L189 47.4L193.1 45L197.3 44.2L201.6 45.3L205.8 45.4L210 47.3M228.4 50.4L232.7 50.3L236.9 50L241.2 49.7L245.3 49.6L249.6 48.4L253.9 47L257.5 49.1L260.4 53L264 53.3L267.6 54.4L270.9 56M342.8 110.7L345.5 113.1L346.4 116.4L345 120.5L343.4 124.6L343.8 127.9L343.9 131.1L344.1 134.2L345.3 137L348.6 139.2L350.3 141.7L350.7 144L350.3 146.4M352.7 162.8L350.6 164.2L348.4 165.3L346.2 165.9L344.1 166.2L344.4 166.8L345.5 167.7L346.2 168.8L346.5 169.9L346.1 170.6L345 170.9L342.8 170L343.2 172L342.7 173.1L341.7 173.8L340.6 174.4L339.2 174.6L338.3 175.7L338.4 176.7M328.5 179.2L326.5 179.2L324.4 179.3L322.4 179.3L320.3 179.2L318.2 178.5L316.8 178.3L315.7 179.1L314.4 179.1L313.1 178.6L311.8 177.7L310.6 176.6L309.4 175.4L308.2 173.9L306.7 174.3L304.9 175.6L303.2 176.5L301.6 177.1L300.3 177.4L299.6 177.4L300.2 177.3L300.9 176.8L300.3 178.4L300.2 178.7"/><path class="fold" d="M39.9 199.9L40.3 199.6L40.9 199.2L41.5 198.7L42.2 198.2L42.9 197.6L43.7 197L44.4 196.4L45 195.8L45.6 195.2L46.1 194.5L46.5 193.7L47 193L47.5 192.2L48 191.6L48.6 191.1L49.3 190.7L50.2 190.6L51.3 190.6L52.4 190.7L53.6 191L54.8 191.2L55.9 191.5L56.8 191.7L57.4 191.8M23.2 152.5L23.7 152.1L24.4 151.6L25.1 150.9L26 150.1L26.9 149.5L27.9 149L28.8 148.7L29.7 148.8L30.5 149.3L31.4 150.2L32.3 151.4L33.2 152.8L34.1 154.1L35 155.4L35.9 156.4L36.7 157L37.5 157.3L38.3 157.3L39.2 157L39.9 156.7L40.7 156.3L41.3 155.8L41.9 155.5L42.3 155.3M34 102.3L34.7 102.6L35.7 102.9L36.9 103.3L38.2 103.8L39.6 104.3L41 104.9L42.3 105.5L43.5 106.1L44.6 106.9L45.6 107.8L46.6 108.7L47.6 109.7L48.5 110.7L49.5 111.6L50.5 112.4L51.5 113.1L52.6 113.7L53.8 114.1L55 114.5L56.3 114.8L57.4 115.1L58.5 115.3L59.4 115.5L60.1 115.7M71.3 59.6L71.6 60.2L72 61.1L72.5 62.1L73.1 63.2L73.7 64.4L74.2 65.6L74.8 66.7L75.3 67.8L75.7 69L76 70.1L76.3 71.4L76.5 72.6L76.9 73.8L77.3 74.8L77.9 75.8L78.6 76.5L79.6 77.1L81 77.5L82.5 77.8L84 78L85.6 78.1L87 78.2L88.2 78.3L89 78.3M97.6 42.7L97.9 43.4L98.3 44.2L98.7 45.2L99.2 46.4L99.7 47.5L100.3 48.7L101 49.8L101.7 50.8L102.5 51.7L103.4 52.5L104.5 53.3L105.5 54L106.6 54.8L107.5 55.6L108.3 56.4L108.9 57.3L109.3 58.3L109.5 59.4L109.6 60.6L109.6 61.9L109.5 63L109.4 64.1L109.4 65L109.3 65.7M164.9 22.4L164.8 23.2L164.6 24.3L164.5 25.6L164.3 27.1L164.1 28.6L164 30.2L164.1 31.7L164.2 33L164.6 34.3L165.1 35.6L165.8 36.8L166.5 38L167.2 39.3L167.9 40.5L168.5 41.6L168.9 42.8L169.2 44L169.3 45.3L169.4 46.6L169.5 47.9L169.5 49.1L169.5 50.2L169.5 51.1L169.5 51.8M232 19.2L232 19.8L232.1 20.6L232.3 21.5L232.4 22.6L232.5 23.7L232.5 24.8L232.4 25.8L232.2 26.8L231.8 27.7L231.2 28.7L230.4 29.6L229.6 30.5L228.9 31.4L228.3 32.3L227.9 33.2L227.8 34.1L228.1 35L228.6 36L229.4 37L230.4 38L231.3 38.9L232.3 39.8L233 40.5L233.5 41M267.3 24.4L266.9 25.1L266.2 26L265.5 27.1L264.7 28.3L263.9 29.5L263.1 30.8L262.5 32.1L262.1 33.4L261.9 34.6L261.9 35.9L262 37.2L262.1 38.6L262.3 39.9L262.4 41.2L262.4 42.4L262.3 43.6L262 44.7L261.5 45.9L261 47.1L260.4 48.1L259.8 49.2L259.3 50.1L258.8 50.8L258.5 51.4M318.3 46.6L318.3 47.1L318.3 47.9L318.3 48.9L318.3 49.9L318.3 51L318.1 52L317.9 52.9L317.5 53.6L316.9 54.2L316.2 54.7L315.3 55.1L314.4 55.4L313.4 55.7L312.4 56L311.5 56.4L310.7 56.7L309.9 57.1L309.1 57.6L308.4 58L307.7 58.5L307 58.9L306.4 59.2L305.9 59.6L305.5 59.8M372.1 113.4L371.6 113.4L370.9 113.3L370.1 113.2L369.2 113.1L368.2 113.1L367.3 113L366.4 113.1L365.6 113.2L364.8 113.3L364.1 113.6L363.4 113.9L362.7 114.2L362 114.6L361.3 114.9L360.6 115.3L360 115.7L359.4 116.1L358.7 116.5L358.1 117L357.4 117.4L356.9 117.9L356.3 118.3L355.9 118.6L355.6 118.9M373.7 179L372.9 178.9L371.9 178.7L370.6 178.5L369.3 178.2L367.8 177.9L366.4 177.5L365 177.1L363.8 176.5L362.7 175.9L361.7 175L360.7 174.1L359.7 173.2L358.7 172.2L357.8 171.2L356.9 170.2L355.9 169.4L355 168.5L354 167.6L353 166.7L352 165.9L351.1 165.1L350.3 164.4L349.6 163.8L349.1 163.3M353.5 201.6L352.9 201.4L352.1 201L351.1 200.6L350.1 200.2L349 199.7L348.1 199.1L347.3 198.5L346.7 197.8L346.5 196.9L346.5 196L346.7 194.9L346.9 193.8L347.2 192.6L347.4 191.6L347.5 190.6L347.3 189.8L347 189.1L346.4 188.4L345.7 187.9L344.9 187.4L344.2 186.9L343.4 186.5L342.9 186.2L342.4 186M300.3 206L300.7 205.6L301.4 205.1L302.3 204.6L303.2 203.9L304 203.2L304.7 202.4L305.2 201.6L305.3 200.8L305 199.9L304.3 199L303.3 197.9L302.2 196.9L301.1 195.8L300.1 194.8L299.4 193.8L299 193L299.1 192.2L299.5 191.5L300.1 190.9L300.8 190.3L301.6 189.7L302.4 189.3L303 188.9L303.4 188.6"/><path class="fold" style="stroke-width:1.5;opacity:.7" d="M100 116C106 82 150 56 200 55C256 54 304 72 322 106"/><path class="fold" style="stroke-width:1.5;opacity:.7" d="M332 52C320 84 308 114 302 140"/><path class="fold" style="stroke-width:1.5;opacity:.7" d="M376 158C348 152 322 148 302 142"/><path class="fold" style="stroke-width:1.5;opacity:.7" d="M210 17C214 34 224 46 234 52"/>'}
+];
+const BY_ID=Object.fromEntries(PARTS.map(p=>[p.id,p]));
+const DRAW=['cerebellum','cortex','medulla','pons','midbrain','thalamus','hypothalamus','pineal','pituitary'];
+const CORD='<path class="ctx" d="M250 299L274 299C275 314 276 330 277 343L254 343C252 330 251 314 250 299Z"/>';
+
+/* ---------- помощники ---------- */
+const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const lc=s=>s.charAt(0).toLowerCase()+s.slice(1);
+const plural=(n,f)=>{const a=Math.abs(n)%100,b=a%10;return a>10&&a<20?f[2]:b>1&&b<5?f[1]:b===1?f[0]:f[2];};
+function shuffle(a){a=a.slice();for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]];}return a;}
+const pick=(a,n)=>shuffle(a).slice(0,n);
+const norm=s=>String(s).toLowerCase().replace(/ё/g,'е').replace(/[^a-zа-я0-9\s]/g,' ').replace(/\s+/g,' ').trim();
+PARTS.forEach(p=>{p.aliases=p.aliases.map(norm);});
+function lev(a,b){const m=a.length,n=b.length;if(!m)return n;if(!n)return m;let prev=[];for(let j=0;j<=n;j++)prev[j]=j;for(let i=1;i<=m;i++){const cur=[i];for(let j=1;j<=n;j++){cur[j]=Math.min(prev[j]+1,cur[j-1]+1,prev[j-1]+(a[i-1]===b[j-1]?0:1));}prev=cur;}return prev[n];}
+function checkName(input,p){
+  const t=norm(input);
+  if(!t)return{ok:false};
+  if(p.aliases.includes(t))return{ok:true};
+  if(t.length>=6&&p.aliases.some(a=>a.length>=6&&lev(t,a)<=1))return{ok:true,typo:true};
+  return{ok:false};
+}
+function makeStatements(p){
+  const maxGood=Math.min(4,p.good.length);
+  const minGood=Math.max(2,6-p.bad.length);
+  const k=minGood+Math.floor(Math.random()*(maxGood-minGood+1));
+  return shuffle(pick(p.good,k).map(t=>({text:t,truth:true})).concat(pick(p.bad,6-k).map(t=>({text:t,truth:false}))));
+}
+function makeOptions(p){
+  const nSim=1+Math.floor(Math.random()*2);
+  const sim=shuffle(p.similar).slice(0,nSim);
+  const rest=shuffle(PARTS.filter(x=>x.id!==p.id&&!sim.includes(x.id)).map(x=>x.id));
+  return shuffle([p.id].concat(sim,rest).slice(0,4));
+}
+const gradeOf=pct=>pct>=90?{n:5,t:'Отлично',c:'',s:'Отличный результат.'}:pct>=70?{n:4,t:'Хорошо',c:'',s:'Хорошо. Загляни в разбор ошибок и повтори слабые места.'}:pct>=50?{n:3,t:'Удовлетворительно',c:'warn',s:'Зачёт есть, но стоит повторить. Начни с разбора ошибок ниже.'}:{n:2,t:'Нужно повторить',c:'bad',s:'Пока мало. Пройди режим «Учение» и попробуй ещё раз.'};
+
+/* ---------- иконки и схема ---------- */
+const ICON={
+ check:'<svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>',
+ cross:'<svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M6.5 6.5l11 11M17.5 6.5l-11 11" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"/></svg>',
+ back:'<svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>'
+};
+const icon=n=>ICON[n];
+
+function brainSVG(on,interactive){
+  const parts=DRAW.map(id=>{
+    const p=BY_ID[id];
+    const attrs=interactive?` tabindex="0" role="button" aria-label="${esc(p.name)}"`:'';
+    return(id==='medulla'?CORD:'')+`<g class="part${on===id?' on':''}" data-part="${id}"${attrs}>${p.svg}</g>`;
+  }).join('');
+  const r=on&&BY_ID[on].ring;
+  const ring=r?`<ellipse class="ring" cx="${r[0]}" cy="${r[1]}" rx="${r[2]}" ry="${r[3]}"/>`:'';
+  return `<svg class="brain" viewBox="0 0 400 345" role="${interactive?'group':'img'}" aria-label="Схема головного мозга, срединный разрез. Лоб слева, затылок справа.">${parts}<text class="lbl" x="284" y="336">спинной мозг</text>${ring}</svg>`;
+}
+const figureHTML=on=>`<figure class="glass figure"><div class="canvas">${brainSVG(on,false)}</div><figcaption class="figcap">Срединный разрез мозга. Лоб слева, затылок справа.</figcaption></figure>`;
+
+/* ---------- состояние ---------- */
+const view=document.getElementById('view');
+const S={screen:'home',ref:'cortex'};
+let L=null,T=null;
+
+/* ---------- общие блоки ---------- */
+function qhead(title,label,done,n,isTest){
+  return `<header class="glass qhead"><button type="button" class="btn btn-ghost btn-sm" data-act="${isTest?'exit-ask':'go-home'}">${icon('back')}<span>Меню</span></button><div class="qtitle"><span class="display">${title}</span><span class="count">${label}</span></div><div class="prog" role="progressbar" aria-label="Прогресс" aria-valuemin="0" aria-valuemax="${n}" aria-valuenow="${done}"><i style="--w:${done/n*100}%"></i></div></header>`
+  +(isTest?`<div class="glass exitbar" id="exitbar" hidden><p>Выйти из проверки? Ответы не сохранятся.</p><div class="row"><button type="button" class="btn btn-ghost btn-sm" data-act="exit-no">Остаться</button><button type="button" class="btn btn-primary btn-sm" data-act="go-home">Выйти</button></div></div>`:'');
+}
+const stmtsHTML=st=>`<div class="stmts">${st.map((s,i)=>`<div class="stmt" data-i="${i}"><p>${esc(s.text)}</p><div class="yn" role="group" aria-label="Ответ на утверждение ${i+1}"><button type="button" data-act="mark" data-i="${i}" data-v="1" aria-pressed="false">Верно</button><button type="button" data-act="mark" data-i="${i}" data-v="0" aria-pressed="false">Неверно</button></div><div class="note" hidden></div></div>`).join('')}</div>`;
+const banner=(ok,title,text)=>`<div class="banner ${ok?'ok':'no'}" role="status"><span class="bico">${icon(ok?'check':'cross')}</span><div><strong>${title}</strong><p>${text}</p></div></div>`;
+const recap=(label,text)=>`<div class="recap"><p><strong>${label}</strong> ${esc(text)}</p></div>`;
+
+function setProgress(done,n){
+  const pg=view.querySelector('.prog');
+  if(!pg)return;
+  pg.setAttribute('aria-valuenow',done);
+  pg.firstElementChild.style.setProperty('--w',(done/n*100)+'%');
+}
+function updateFuncUI(){
+  const st=S.screen==='learn'?L:T;
+  if(!st)return;
+  const left=st.marks.filter(m=>m===null).length;
+  const need=[];
+  if(S.screen==='test'&&!st.name.trim())need.push('ввести название');
+  if(left)need.push(`ответить на ${left} ${plural(left,['утверждение','утверждения','утверждений'])}`);
+  const btn=document.getElementById('submit'),hint=document.getElementById('left');
+  if(btn)btn.disabled=need.length>0;
+  if(hint)hint.textContent=need.length?`Осталось: ${need.join(' и ')}.`:'Всё готово, можно отправлять.';
+}
+function setMark(btn){
+  const st=S.screen==='learn'?L:T;
+  if(!st||st.submitted)return;
+  const i=+btn.dataset.i,v=+btn.dataset.v;
+  st.marks[i]=v;
+  btn.parentElement.querySelectorAll('button').forEach(b=>b.setAttribute('aria-pressed',String(+b.dataset.v===v)));
+  updateFuncUI();
+}
+
+/* ---------- главная ---------- */
+function homeHTML(){
+  return `<section class="hero"><h1 class="display">Отделы<br>головного мозга</h1><p class="lead">Смотри на схему, называй отдел и выбирай его функции.</p></section>
+<section class="modes">
+ <article class="glass mode"><div class="pills"><span class="pill">9 отделов</span><span class="pill">Без оценки</span></div><h2 class="display">Учение</h2><p>Четыре варианта названия. Затем отметь у каждой функции «верно» или «неверно». Результат виден сразу после ответа.</p><button type="button" class="btn btn-primary" data-act="start-learn">Начать учение</button></article>
+ <article class="glass mode"><div class="pills"><span class="pill">9 вопросов</span><span class="pill">С оценкой</span></div><h2 class="display">Проверка знаний</h2><p>Впиши название сам и отметь функции. В конце получишь процент, оценку и разбор ошибок.</p><button type="button" class="btn btn-primary" data-act="start-test">Начать проверку</button></article>
+</section>
+<section class="glass panel" aria-labelledby="refh"><div class="ref-head"><h2 class="display" id="refh">Схема и функции</h2><p class="hint">Нажми на отдел на схеме или выбери его в списке.</p></div><div id="refbox"></div></section>
+<p class="foot">Схема упрощена и показывает срединный разрез мозга. Функции даны по параграфу «Головной мозг» из учебника.</p>`;
+}
+function detailHTML(p){
+  return `<h3 class="display">${esc(p.name)}</h3><p class="where">${esc(p.where)}</p><p class="brief">${esc(p.brief)}</p><ul class="fx">${p.good.map(g=>`<li><span class="tick">${icon('check')}</span><span>${esc(g)}</span></li>`).join('')}</ul>`;
+}
+function refHTML(){
+  const p=BY_ID[S.ref];
+  return `<div class="ref"><div class="canvas">${brainSVG(S.ref,true)}</div><div class="refside"><div class="chips" role="group" aria-label="Отделы мозга">${PARTS.map(x=>`<button type="button" class="chip" data-act="ref" data-id="${x.id}" aria-pressed="${x.id===S.ref}">${esc(x.name)}</button>`).join('')}</div><article class="detail" id="detail" aria-live="polite">${detailHTML(p)}</article></div></div>`;
+}
+function selectRef(id){
+  S.ref=id;
+  const box=document.getElementById('refbox');
+  if(!box)return;
+  box.querySelectorAll('.chip').forEach(c=>c.setAttribute('aria-pressed',String(c.dataset.id===id)));
+  box.querySelectorAll('.part').forEach(g=>g.classList.toggle('on',g.dataset.part===id));
+  const svg=box.querySelector('svg.brain');
+  const old=svg.querySelector('.ring');
+  if(old)old.remove();
+  const r=BY_ID[id].ring;
+  if(r){
+    const e=document.createElementNS('http://www.w3.org/2000/svg','ellipse');
+    e.setAttribute('class','ring');
+    e.setAttribute('cx',r[0]);e.setAttribute('cy',r[1]);e.setAttribute('rx',r[2]);e.setAttribute('ry',r[3]);
+    svg.appendChild(e);
+  }
+  document.getElementById('detail').innerHTML=detailHTML(BY_ID[id]);
+}
+
+/* ---------- режим 1: учение ---------- */
+function startLearn(ids){
+  L={order:shuffle(ids||PARTS.map(p=>p.id)),i:0,results:[]};
+  prepLearn();
+  S.screen='learn';
+  render();
+}
+function prepLearn(){
+  const p=BY_ID[L.order[L.i]];
+  L.stage='name';L.picked=null;L.opts=makeOptions(p);L.stmts=makeStatements(p);
+  L.marks=new Array(6).fill(null);L.submitted=false;L.cur={nameOk:null,funcOk:null,wrong:0};
+}
+function learnHTML(){
+  const p=BY_ID[L.order[L.i]],n=L.order.length;
+  const head=qhead('Учение',`Отдел ${L.i+1} из ${n}`,L.i,n,false);
+  let panel;
+  if(L.stage==='name'){
+    panel=`<section class="glass panel q"><p class="eyebrow">Шаг 1 из 2</p><h2 class="display" tabindex="-1" data-focus>Что это за отдел?</h2><p class="hint">Смотри на выделенное место на схеме и выбери название.</p><div class="opts">${L.opts.map((id,k)=>`<button type="button" class="opt" data-act="pick" data-id="${id}"><span class="key">${'АБВГ'[k]}</span><span class="otxt">${esc(BY_ID[id].name)}</span><span class="mark"></span></button>`).join('')}</div><div id="fb" class="fb" aria-live="polite"></div></section>`;
+  }else{
+    panel=`<section class="glass panel q"><p class="eyebrow">Шаг 2 из 2</p><h2 class="display" tabindex="-1" data-focus>${esc(p.name)}</h2><p class="hint">Что делает этот отдел? Для каждого утверждения выбери «Верно» или «Неверно».</p>${stmtsHTML(L.stmts)}<div class="actions"><button type="button" class="btn btn-primary" id="submit" data-act="submit-learn" disabled>Отправить</button><span class="hint" id="left"></span></div><div id="fb" class="fb" aria-live="polite"></div></section>`;
+  }
+  return head+`<div class="quiz">${figureHTML(p.id)}${panel}</div>`;
+}
+function pickName(id){
+  if(L.picked)return;
+  const p=BY_ID[L.order[L.i]];
+  L.picked=id;
+  const ok=id===p.id;
+  L.cur.nameOk=ok;
+  view.querySelectorAll('.opt').forEach(b=>{
+    const bid=b.dataset.id;
+    b.disabled=true;
+    b.classList.toggle('ok',bid===p.id);
+    b.classList.toggle('no',bid===id&&!ok);
+    b.classList.toggle('faded',bid!==p.id&&bid!==id);
+    b.querySelector('.mark').innerHTML=bid===p.id?icon('check'):(bid===id?icon('cross'):'');
+  });
+  const fb=document.getElementById('fb');
+  fb.innerHTML=banner(ok,ok?'Верно!':'Не верно',ok?`Это ${esc(lc(p.name))}.`:`Это ${esc(lc(p.name))}, а не ${esc(lc(BY_ID[id].name))}.`)+recap('Где находится.',p.where)+`<button type="button" class="btn btn-primary" data-act="tofunc">К функциям</button>`;
+  const nb=fb.querySelector('button');
+  if(nb)nb.focus({preventScroll:true});
+}
+function submitLearn(){
+  if(L.submitted)return;
+  const p=BY_ID[L.order[L.i]],n=L.order.length;
+  L.submitted=true;
+  let wrong=0;
+  L.stmts.forEach((s,i)=>{
+    const ok=(L.marks[i]===1)===s.truth;
+    if(!ok)wrong++;
+    const row=view.querySelector(`.stmt[data-i="${i}"]`);
+    row.classList.add(ok?'ok':'no');
+    row.querySelectorAll('.yn button').forEach(b=>{b.disabled=true;});
+    const note=row.querySelector('.note');
+    note.hidden=false;
+    note.innerHTML=icon(ok?'check':'cross')+'<span>'+(ok?(s.truth?'Правильно: это функция отдела.':'Правильно: это не функция отдела.'):(s.truth?'Ошибка: на самом деле это функция отдела.':'Ошибка: на самом деле это не функция отдела.'))+'</span>';
+  });
+  L.cur.funcOk=wrong===0;L.cur.wrong=wrong;
+  L.results.push({id:p.id,nameOk:L.cur.nameOk,funcOk:L.cur.funcOk,wrong});
+  setProgress(L.i+1,n);
+  const last=L.i+1>=n;
+  const act=view.querySelector('.actions');
+  if(act)act.hidden=true;
+  const fb=document.getElementById('fb');
+  fb.innerHTML=banner(wrong===0,wrong===0?'Верно!':'Не верно',wrong===0?'Все функции определены правильно.':`Ошибок: ${wrong} из ${L.stmts.length}. Посмотри пояснения под утверждениями.`)+recap('Запомни.',p.brief)+`<button type="button" class="btn btn-primary" data-act="next-learn">${last?'Завершить':'Дальше'}</button>`;
+  const nb=fb.querySelector('button');
+  if(nb)nb.focus({preventScroll:true});
+}
+function nextLearn(){
+  if(L.i+1<L.order.length){L.i++;prepLearn();render();}
+  else{S.screen='learnDone';render();}
+}
+function learnDoneHTML(){
+  const R=L.results,n=R.length;
+  const names=R.filter(r=>r.nameOk).length,funcs=R.filter(r=>r.funcOk).length;
+  const failed=R.filter(r=>!(r.nameOk&&r.funcOk));
+  const rows=R.map(r=>{const ok=r.nameOk&&r.funcOk;return `<li class="rrow ${ok?'ok':'no'}"><span class="ricon">${icon(ok?'check':'cross')}</span><span class="rname">${esc(BY_ID[r.id].name)}</span><span class="rdet">название ${r.nameOk?'верно':'не верно'} · функции ${r.funcOk?'верно':'ошибок: '+r.wrong}</span></li>`;}).join('');
+  return `<section class="glass panel q"><p class="eyebrow">Учение завершено</p><h2 class="display" tabindex="-1" data-focus>${failed.length?'Круг пройден':'Без ошибок'}</h2><dl class="stats"><div><dt>Названия</dt><dd>${names} из ${n}</dd></div><div><dt>Функции без ошибок</dt><dd>${funcs} из ${n}</dd></div></dl><ul class="rlist">${rows}</ul><div class="endact">${failed.length?`<button type="button" class="btn btn-primary" data-act="retry-errors">Повторить ошибки (${failed.length})</button>`:''}<button type="button" class="btn ${failed.length?'btn-ghost':'btn-primary'}" data-act="start-learn">Пройти заново</button><button type="button" class="btn btn-ghost" data-act="go-home">В меню</button></div></section>`;
+}
+
+/* ---------- режим 2: проверка знаний ---------- */
+function startTest(){
+  T={order:shuffle(PARTS.map(p=>p.id)),i:0,answers:[]};
+  prepTest();
+  S.screen='test';
+  render();
+}
+function prepTest(){
+  const p=BY_ID[T.order[T.i]];
+  T.stmts=makeStatements(p);T.marks=new Array(6).fill(null);T.name='';T.submitted=false;
+}
+function testHTML(){
+  const p=BY_ID[T.order[T.i]],n=T.order.length,last=T.i+1>=n;
+  return qhead('Проверка знаний',`Вопрос ${T.i+1} из ${n}`,T.i,n,true)
+  +`<div class="quiz">${figureHTML(p.id)}<section class="glass panel q"><p class="eyebrow">Результат — в конце</p><h2 class="display" tabindex="-1" data-focus>Назови отдел и отметь функции</h2><label class="lab" for="nameInput">Название отдела</label><input id="nameInput" class="input" type="text" autocomplete="off" autocapitalize="none" autocorrect="off" spellcheck="false" enterkeyhint="next" placeholder="Впиши название"><p class="hint">Для каждого утверждения выбери «Верно» или «Неверно».</p>${stmtsHTML(T.stmts)}<div class="actions"><button type="button" class="btn btn-primary" id="submit" data-act="submit-test" disabled>${last?'Завершить':'Ответить'}</button><span class="hint" id="left"></span></div></section></div>`;
+}
+function submitTest(){
+  const p=BY_ID[T.order[T.i]];
+  if(T.marks.some(m=>m===null)||!T.name.trim())return;
+  T.answers.push({id:p.id,typed:T.name.trim(),name:checkName(T.name,p),stmts:T.stmts.map((s,i)=>({text:s.text,truth:s.truth,mark:T.marks[i]}))});
+  if(T.i+1<T.order.length){T.i++;prepTest();render();}
+  else{S.screen='result';render();}
+}
+function errHTML(a){
+  const p=BY_ID[a.id];
+  const bad=a.stmts.filter(s=>(s.mark===1)!==s.truth);
+  if(a.name.ok&&!bad.length)return '';
+  const nameRow=a.name.ok?'':`<p class="erow"><span class="ei">${icon('cross')}</span><span><strong>Название.</strong> Ты написал «${esc(a.typed)}». Правильно: «${esc(p.name)}».</span></p>`;
+  const items=bad.map(s=>`<li><span class="ei">${icon('cross')}</span><span>${esc(s.text)}<small>Ты ответил: ${s.mark===1?'верно':'неверно'}. На самом деле: ${s.truth?'это функция отдела':'это не функция этого отдела'}.</small></span></li>`).join('');
+  return `<article class="glass err"><h3 class="display">${esc(p.name)}</h3>${nameRow}${bad.length?`<p class="eh">Функции с ошибкой</p><ul class="elist">${items}</ul>`:''}<p class="recap2"><strong>Запомни.</strong> ${esc(p.brief)}</p></article>`;
+}
+function scoreTest(){
+  const A=T.answers;
+  let total=0,names=0,fOk=0,fAll=0,typos=0,errors=0;
+  A.forEach(a=>{
+    const nOk=a.name.ok?1:0;
+    const fc=a.stmts.filter(s=>(s.mark===1)===s.truth).length;
+    total+=nOk+fc/a.stmts.length;
+    names+=nOk;fOk+=fc;fAll+=a.stmts.length;
+    if(a.name.ok&&a.name.typo)typos++;
+    errors+=(nOk?0:1)+(a.stmts.length-fc);
+  });
+  return{pct:Math.round(total/(2*A.length)*100),names,fOk,fAll,typos,errors};
+}
+function resultHTML(){
+  const A=T.answers,n=A.length,sc=scoreTest(),g=gradeOf(sc.pct);
+  const C=2*Math.PI*54;
+  const errs=A.map(errHTML).filter(Boolean);
+  const gauge=`<div class="gauge"><svg viewBox="0 0 140 140" aria-hidden="true"><circle class="gt" cx="70" cy="70" r="54"/><circle class="gb ${g.c}" cx="70" cy="70" r="54" transform="rotate(-90 70 70)" style="stroke-dasharray:${C.toFixed(1)};stroke-dashoffset:${(C*(1-sc.pct/100)).toFixed(1)}"/></svg><div class="gv"><span class="display">${sc.pct}%</span><small>верно</small></div></div>`;
+  const top=`<section class="glass result">${gauge}<div class="rtext"><p class="eyebrow">Результат проверки</p><h2 class="display" tabindex="-1" data-focus>Оценка <span class="grade ${g.c}">${g.n}</span></h2><p class="lead">${esc(g.t)}. ${esc(g.s)}</p><dl class="stats"><div><dt>Названия</dt><dd>${sc.names} из ${n}</dd></div><div><dt>Функции</dt><dd>${sc.fOk} из ${sc.fAll}</dd></div><div><dt>Ошибок</dt><dd>${sc.errors}</dd></div></dl><p class="scale">Шкала: 90–100% — «5», 70–89% — «4», 50–69% — «3», меньше 50% — «2». Название и функции дают по половине балла за вопрос.</p>${sc.typos?`<p class="scale">В некоторых названиях была опечатка. Ответ засчитан.</p>`:''}</div></section>`;
+  const body=errs.length
+    ?`<div class="sec-head"><h2 class="display">Разбор ошибок</h2><span class="hint">Отделов с ошибками: ${errs.length}</span></div><div class="errs">${errs.join('')}</div>`
+    :`<section class="glass clean"><span class="bico">${icon('check')}</span><div><h2 class="display">Ошибок нет</h2><p class="hint">Все названия и функции отмечены верно.</p></div></section>`;
+  return top+body+`<div class="endact"><button type="button" class="btn btn-primary" data-act="start-test">Пройти ещё раз</button><button type="button" class="btn btn-ghost" data-act="go-home">В меню</button></div>`;
+}
+
+/* ---------- отрисовка ---------- */
+function render(o){
+  o=o||{};
+  let html='';
+  if(S.screen==='home')html=homeHTML();
+  else if(S.screen==='learn')html=learnHTML();
+  else if(S.screen==='learnDone')html=learnDoneHTML();
+  else if(S.screen==='test')html=testHTML();
+  else if(S.screen==='result')html=resultHTML();
+  view.innerHTML=html;
+  if(S.screen==='home'){const box=document.getElementById('refbox');if(box)box.innerHTML=refHTML();}
+  if((S.screen==='learn'&&L.stage==='func')||S.screen==='test')updateFuncUI();
+  if(!o.noFocus){
+    try{window.scrollTo(0,0);}catch(e){}
+    const f=view.querySelector('[data-focus]');
+    if(f)f.focus({preventScroll:true});
+  }
+}
+
+/* ---------- события ---------- */
+const ACTS={
+  'go-home':()=>{S.screen='home';L=null;T=null;render();},
+  'start-learn':()=>startLearn(),
+  'retry-errors':()=>startLearn(L.results.filter(r=>!(r.nameOk&&r.funcOk)).map(r=>r.id)),
+  'start-test':()=>startTest(),
+  'ref':t=>selectRef(t.dataset.id),
+  'pick':t=>pickName(t.dataset.id),
+  'tofunc':()=>{L.stage='func';render();},
+  'mark':t=>setMark(t),
+  'submit-learn':()=>submitLearn(),
+  'next-learn':()=>nextLearn(),
+  'submit-test':()=>submitTest(),
+  'exit-ask':()=>{const b=document.getElementById('exitbar');if(b){b.hidden=false;const s=b.querySelector('button');if(s)s.focus({preventScroll:true});}},
+  'exit-no':()=>{const b=document.getElementById('exitbar');if(b)b.hidden=true;}
+};
+document.addEventListener('click',e=>{
+  const th=e.target.closest('[data-theme-set]');
+  if(th){setTheme(th.dataset.themeSet);return;}
+  const part=e.target.closest('[data-part]');
+  if(part&&S.screen==='home'&&part.hasAttribute('tabindex')){selectRef(part.dataset.part);return;}
+  const t=e.target.closest('[data-act]');
+  if(!t||t.disabled)return;
+  const f=ACTS[t.dataset.act];
+  if(f)f(t);
+});
+document.addEventListener('keydown',e=>{
+  if(e.key!=='Enter'&&e.key!==' ')return;
+  const part=e.target.closest&&e.target.closest('g[data-part][tabindex]');
+  if(part&&S.screen==='home'){e.preventDefault();selectRef(part.dataset.part);}
+});
+document.addEventListener('input',e=>{
+  if(e.target&&e.target.id==='nameInput'&&T){T.name=e.target.value;updateFuncUI();}
+});
+
+/* ---------- тема ---------- */
+const root=document.documentElement;
+const mq=window.matchMedia?window.matchMedia('(prefers-color-scheme: dark)'):null;
+function effTheme(){const a=root.getAttribute('data-theme');return a==='dark'||a==='light'?a:(mq&&mq.matches?'dark':'light');}
+function syncTheme(){const t=effTheme();document.querySelectorAll('[data-theme-set]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.themeSet===t)));}
+function setTheme(t){root.setAttribute('data-theme',t);try{localStorage.setItem('brain-theme',t);}catch(e){}syncTheme();}
+try{const s=localStorage.getItem('brain-theme');if(s==='light'||s==='dark')root.setAttribute('data-theme',s);}catch(e){}
+if(mq&&mq.addEventListener)mq.addEventListener('change',syncTheme);
+syncTheme();
+
+render({noFocus:true});
+
+/* для проверки в тестах */
+window.__brain={PARTS,checkName,makeStatements,makeOptions,gradeOf};
+})();
+</script>
